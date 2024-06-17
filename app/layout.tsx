@@ -16,7 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <div className="absolute bottom-4 left-4 z-20">
+        <span className="md:hidden lg:hidden xl:hidden text-black">SM</span>
+        <span className= "hidden md:block lg:hidden xl:hidden text-black">MD</span>
+        <span className= "hidden lg:block md:hidden xl:hidden text-black">LG</span>
+        <span className= "hidden xl:block md:hidden sm:hidden text-black">XL</span>
+    </div>
+        {children}</body>
+
     </html>
   );
 }
